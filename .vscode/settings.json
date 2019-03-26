@@ -1,0 +1,23 @@
+{
+    //PythonのPATHをワークスペースの仮想環境にする
+    // ${workspaceFolder}:ワークスペースのパス
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    //"python.pythonPath": "venv\\Scripts\\python.exe",
+
+    // 仮想環境にインストールしたファイルは監視対象から除外する
+    "files.watcherExclude": {
+        "**/venv/**": true
+    },
+    
+    // リンタ:PyLint
+    "python.linting.pylintEnabled": false,
+    // リンタ:Flake8
+    "python.linting.flake8Enabled": true,
+
+    //コードフォーマッタ:Black
+    "python.formatting.provider": "black",
+    // Blackは貼り付け時の成型に対応していない
+    "editor.formatOnPaste": false,
+    // 1行の文字数：88文字
+    "python.linting.flake8Args":["--max-line-length","88"],
+}
